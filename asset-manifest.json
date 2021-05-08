@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/afraz-malik/.github.io/king-shopping/static/css/main.543482d2.chunk.css",
+    "main.js": "/afraz-malik/.github.io/king-shopping/static/js/main.f2ba4aa4.chunk.js",
+    "main.js.map": "/afraz-malik/.github.io/king-shopping/static/js/main.f2ba4aa4.chunk.js.map",
+    "runtime-main.js": "/afraz-malik/.github.io/king-shopping/static/js/runtime-main.fbd6da87.js",
+    "runtime-main.js.map": "/afraz-malik/.github.io/king-shopping/static/js/runtime-main.fbd6da87.js.map",
+    "static/js/2.32dd14f8.chunk.js": "/afraz-malik/.github.io/king-shopping/static/js/2.32dd14f8.chunk.js",
+    "static/js/2.32dd14f8.chunk.js.map": "/afraz-malik/.github.io/king-shopping/static/js/2.32dd14f8.chunk.js.map",
+    "static/js/3.f5113dea.chunk.js": "/afraz-malik/.github.io/king-shopping/static/js/3.f5113dea.chunk.js",
+    "static/js/3.f5113dea.chunk.js.map": "/afraz-malik/.github.io/king-shopping/static/js/3.f5113dea.chunk.js.map",
+    "index.html": "/afraz-malik/.github.io/king-shopping/index.html",
+    "static/css/main.543482d2.chunk.css.map": "/afraz-malik/.github.io/king-shopping/static/css/main.543482d2.chunk.css.map",
+    "static/js/2.32dd14f8.chunk.js.LICENSE.txt": "/afraz-malik/.github.io/king-shopping/static/js/2.32dd14f8.chunk.js.LICENSE.txt",
+    "static/media/cart-icon.a688874f.svg": "/afraz-malik/.github.io/king-shopping/static/media/cart-icon.a688874f.svg",
+    "static/media/crown.3a4e2b15.svg": "/afraz-malik/.github.io/king-shopping/static/media/crown.3a4e2b15.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fbd6da87.js",
+    "static/js/2.32dd14f8.chunk.js",
+    "static/css/main.543482d2.chunk.css",
+    "static/js/main.f2ba4aa4.chunk.js"
+  ]
+}
