@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.scss';
 //Router
-import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch, Redirect, withRouter} from "react-router-dom";
 //Firebase
 import {auth, createUser} from './firebase/firebase-utils'
 //Redux
@@ -51,18 +51,20 @@ class App extends React.Component{
     this.unSubFromAuth = null
   }
   render(){
+    const {currentUser, isCartHidden} = this.props;
+    const URL = '/king-shopping/'
     return (
       <Router>
-        <Header currentUser = {this.props.currentUser} hidden={this.props.isCartHidden}/>
+        <Route  path={`${URL}`}> <Header currentUser = {currentUser} hidden={isCartHidden}/> </Route>
         <Switch>
-          <Route exact path='/' component={HomePage}/>
-          <Route  path='/shop/' component={ShopPage}/>
-          <Route exact path='/checkout/' component={CheckOut}/>
-          <Route exact path = '/signIn' render={()=> this.props.currentUser? (<Redirect to ='/'/>):<SignInSignUp/>} />
+          <Route exact path={`${URL}`} component={HomePage}/>
+          <Route   path={`${URL}shop`} component={ShopPage}/>
+          <Route exact path={`${URL}checkout`} component={CheckOut}/>
+          <Route exact path = {`${URL}signIn`} render={()=> currentUser? (<Redirect to ={`/`}/>):<SignInSignUp/>} />
         </Switch>
       </Router>  
     );
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

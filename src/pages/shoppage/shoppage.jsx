@@ -7,12 +7,12 @@ import ShopCollection from '../../components/shop-collection/shop-collection';
 import ShopCategory from '../../components/shop-category/shop-category'
 
 
-const  ShopPage = () =>{ 
+const  ShopPage = ({match}) =>{ 
 
     return(
         <div className="">
-            <Route exact path='/shop' component={ShopCollection}/>
-            <Route  path='/shop/:category' component={ShopCategory}/>
+            <Route exact path={`${match.path}`} component={ShopCollection}/>
+            <Route  path={`${match.path}/:category`} component={ShopCategory}/>
         </div>
     )
 }

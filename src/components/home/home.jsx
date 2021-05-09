@@ -16,7 +16,6 @@ const mapStateToProps = createStructuredSelector({
 })
 
 const Home =({shopData}) =>{
-    console.log(shopData)
     return(
         <div className='directory-menu'>
             {

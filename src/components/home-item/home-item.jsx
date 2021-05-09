@@ -5,8 +5,9 @@ import './home-item.scss';
 import {withRouter} from 'react-router-dom'
 
 const HomeItem = ({title, imgUrl, size, routeName, history, match}) => {
+
     return(
-        <div className={`${size} menu-item`}  onClick={() => history.push(`${match.url}shop/${routeName}`)}>
+        <div className={`${size} menu-item`}  onClick={() => history.push(`${match.path}shop/${routeName}`)}>
             <div className="background-image"  style={{backgroundImage: `url(${imgUrl})`}}>
             </div>
             <div className="content">

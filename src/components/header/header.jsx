@@ -1,27 +1,31 @@
-import {Link} from 'react-router-dom';
+import React from 'react';
+//Router
+import {Link, withRouter} from 'react-router-dom';
+//Firebase
 import { auth } from '../../firebase/firebase-utils';
-import {ReactComponent as Logo} from './crown.svg';
+//Components
 import CartIcon from '../cart-icon/cart-icon';
 import Cart from '../cart/cart'
-import './header.scss'
+//Styles
+import './header.scss';
+import {ReactComponent as Logo} from './crown.svg';
 
 
-const Header = ({currentUser, hidden}) =>{
+const Header = (props) =>{
+    const {currentUser, hidden, match} = props
     return(
         <div className='header'>
-            <Link to='/' className='logo'>
+            <Link to={`${match.path}`} className='logo'>
                 <Logo/>
 
             </Link>
             <div className='rightnav'>
-                <Link to='/shop' className='option'>SHOP</Link>
-                <Link to='/about' className='option'>CONTACT</Link>
+                <Link to={`${match.path}shop`} className='option'>SHOP</Link>
+                <Link to={`${match.path}about`} className='option'>CONTACT</Link>
                 { 
-                    currentUser ?  
-                    (
-                        <div className="option" onClick={()=> auth.signOut()}>SIGN OUT </div> 
-                    )
-                    : <Link to='/signIn' className='option'>SIGN IN </Link>
+                    currentUser 
+                    ?<div className="option" onClick={()=> auth.signOut()}>SIGN OUT </div> 
+                    :<Link to={`${match.path}signin`} className='option'>SIGN IN </Link>
                 }
                 <CartIcon/>
             </div>  
@@ -32,4 +36,4 @@ const Header = ({currentUser, hidden}) =>{
     )
 }
 
-export default Header;
+export default withRouter(Header);

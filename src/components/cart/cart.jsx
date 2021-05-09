@@ -11,7 +11,7 @@ const mapStateToProps = (state) =>{
     })
 }
 
-const Cart = ({cartItems, history, dispatch}) => (
+const Cart = ({cartItems, history, dispatch, match}) => (
     <div className="cart"> 
     {
       
@@ -34,7 +34,7 @@ const Cart = ({cartItems, history, dispatch}) => (
             ?<Button 
                 inverted='true' 
                 onClick={() => {
-                    history.push('/checkout');
+                    history.push(`${match.path}checkout`);
                     dispatch(toggleCart())
                     }
                 }
