@@ -52,7 +52,7 @@ class App extends React.Component{
   }
   render(){
     const {currentUser, isCartHidden} = this.props;
-    const URL = '/king-shopping/'
+    const URL = '/'
     return (
       <Router>
         {/* <Redirect to = {`${URL}`}/> */}
