@@ -48,6 +48,7 @@ class App extends React.Component{
     })
   }
   componentWillUnmount(){
+    console.log('came')
     this.unSubFromAuth = null
   }
   render(){
@@ -61,7 +62,7 @@ class App extends React.Component{
           <Route exact path={`${URL}`} component={HomePage}/>
           <Route   path={`${URL}shop`} component={ShopPage}/>
           <Route exact path={`${URL}checkout`} component={CheckOut}/>
-          <Route exact path = {`${URL}signIn`} render={()=> currentUser? (<Redirect to ={`/`}/>):<SignInSignUp/>} />
+          <Route exact path = {`${URL}signIn`} render={()=> currentUser? (<Redirect to ={`${URL}`}/>):<SignInSignUp/>} />
         </Switch>
       </Router>  
     );
