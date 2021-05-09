@@ -55,7 +55,7 @@ class App extends React.Component{
     const URL = '/king-shopping/'
     return (
       <Router>
-        <Redirect to = {`${URL}`}
+        {/* <Redirect to = {`${URL}`}/> */}
         <Route  path={`${URL}`}> <Header currentUser = {currentUser} hidden={isCartHidden}/> </Route>
         <Switch>
           <Route exact path={`${URL}`} component={HomePage}/>
