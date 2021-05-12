@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/king-shopping/static/css/main.7045d43f.chunk.css",
-    "main.js": "/king-shopping/static/js/main.dc2bceab.chunk.js",
-    "main.js.map": "/king-shopping/static/js/main.dc2bceab.chunk.js.map",
-    "runtime-main.js": "/king-shopping/static/js/runtime-main.9bcc8e00.js",
-    "runtime-main.js.map": "/king-shopping/static/js/runtime-main.9bcc8e00.js.map",
-    "static/js/2.434da798.chunk.js": "/king-shopping/static/js/2.434da798.chunk.js",
-    "static/js/2.434da798.chunk.js.map": "/king-shopping/static/js/2.434da798.chunk.js.map",
-    "static/js/3.f5113dea.chunk.js": "/king-shopping/static/js/3.f5113dea.chunk.js",
-    "static/js/3.f5113dea.chunk.js.map": "/king-shopping/static/js/3.f5113dea.chunk.js.map",
+    "main.css": "/king-shopping/static/css/main.90c0f33f.chunk.css",
+    "main.js": "/king-shopping/static/js/main.1628f4dc.chunk.js",
+    "main.js.map": "/king-shopping/static/js/main.1628f4dc.chunk.js.map",
+    "runtime-main.js": "/king-shopping/static/js/runtime-main.f35a7b58.js",
+    "runtime-main.js.map": "/king-shopping/static/js/runtime-main.f35a7b58.js.map",
+    "static/js/2.4e8dec6c.chunk.js": "/king-shopping/static/js/2.4e8dec6c.chunk.js",
+    "static/js/2.4e8dec6c.chunk.js.map": "/king-shopping/static/js/2.4e8dec6c.chunk.js.map",
+    "static/js/3.2a34517f.chunk.js": "/king-shopping/static/js/3.2a34517f.chunk.js",
+    "static/js/3.2a34517f.chunk.js.map": "/king-shopping/static/js/3.2a34517f.chunk.js.map",
     "index.html": "/king-shopping/index.html",
-    "static/css/main.7045d43f.chunk.css.map": "/king-shopping/static/css/main.7045d43f.chunk.css.map",
-    "static/js/2.434da798.chunk.js.LICENSE.txt": "/king-shopping/static/js/2.434da798.chunk.js.LICENSE.txt",
+    "static/css/main.90c0f33f.chunk.css.map": "/king-shopping/static/css/main.90c0f33f.chunk.css.map",
+    "static/js/2.4e8dec6c.chunk.js.LICENSE.txt": "/king-shopping/static/js/2.4e8dec6c.chunk.js.LICENSE.txt",
     "static/media/cart-icon.a688874f.svg": "/king-shopping/static/media/cart-icon.a688874f.svg",
     "static/media/crown.3a4e2b15.svg": "/king-shopping/static/media/crown.3a4e2b15.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9bcc8e00.js",
-    "static/js/2.434da798.chunk.js",
-    "static/css/main.7045d43f.chunk.css",
-    "static/js/main.dc2bceab.chunk.js"
+    "static/js/runtime-main.f35a7b58.js",
+    "static/js/2.4e8dec6c.chunk.js",
+    "static/css/main.90c0f33f.chunk.css",
+    "static/js/main.1628f4dc.chunk.js"
   ]
 }
