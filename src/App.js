@@ -67,6 +67,7 @@ class App extends React.Component{
   render(){
     const {currentUser, isCartHidden,isFetching } = this.props;
     const URL = '/'
+    console.log(process.env)
     return (
       <Router>
         <Route  path={`${URL}`}> <Header currentUser = {currentUser} hidden={isCartHidden}/> </Route>
