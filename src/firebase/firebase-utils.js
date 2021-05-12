@@ -17,10 +17,19 @@ export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 
-var provider = new firebase.auth.GoogleAuthProvider();
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const  googleProvider = new firebase.auth.GoogleAuthProvider();
+export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
-export const createUser = async (user, additionalData) => {
+
+export const isUserAuthenticated= ()=>{
+  return new Promise((res, rej)=>{
+    const unsub = auth.onAuthStateChanged(user=>{
+      unsub();
+      res(user);
+    }, rej)    
+  })
+}
+export const createUserInFirestore = async (user, additionalData) => {
   if(!user) {
     console.log("No user found")
     return
@@ -42,14 +51,41 @@ export const createUser = async (user, additionalData) => {
       console.log('eoorr', error.message)
     }
   }
-
-
-
   return userRef
+}
+// export const addCollAndDocToFirebase = async (collectionName, objectToAdd) =>{
+//   const collectionRef = firestore.collection(collectionName);
+//   const batch = firestore.batch();
+//   objectToAdd.forEach(obj => {
+//     const docRef = collectionRef.doc(`${obj.id}`);
+//     batch.set(docRef, obj)
+//     console.log(obj.id)
+//   });
+//   return await batch.commit().then(resp => console.log(resp))
+// }
+export const getShopDataFromFirestore = async () =>{
+  const collRef = firestore.collection(`shopData`);
+  const snapShot = await collRef.get();
+  const convertedColl =  snapShot.docs.map( doc => {
+    const {title, items, imgUrl} = doc.data()
+    return  {
+      routeName: encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items,
+      imgUrl,
+    }
+  })
+  const convertedCollToObj= convertedColl.reduce((acc, coll) =>{
+    acc[coll.title.toLowerCase()] = coll;
+    return acc;
+  },{})
+  return convertedCollToObj
 }
 
 
 
+  
 
 
 export default firebase ;

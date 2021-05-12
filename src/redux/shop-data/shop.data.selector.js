@@ -9,7 +9,11 @@ export const shopDataListSelectorToArrays = createSelector(
     [shopDataListSelector],
     shopData => Object.keys(shopData).map(key=> shopData[key])
 )
-export const getCategorySelector = (urlParams) => createSelector(
+export const shopDataListSelectorByParam = (urlParams) => createSelector(
     [shopDataListSelector],
     shopDataList => shopDataList[urlParams]
+)
+export const isFetchingSelector = createSelector(
+    [shopDataSelector],
+    shopData => shopData.isFetching
 )

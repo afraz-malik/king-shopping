@@ -1,11 +1,21 @@
 import React from 'react';
+import './sign-in.scss'
+//Redux
+import {connect} from 'react-redux'
+import {signInWithGoogleStart, signInWithEmailStart} from '../../redux/user/user.action'
+//Components
 import FormInput from '../form-input/form-input';
 import Button from '../button/button';
-import {auth, signInWithGoogle} from '../../firebase/firebase-utils'
-import './sign-in.scss'
+// import {Spinner} from '../spinner/spinner';
+
+
+const mapDispatchToProps = (dispatch) =>({
+    signInWithGoogleStart: () => dispatch(signInWithGoogleStart()),
+    signInWithEmailStart: (emailAndPassword) => dispatch(signInWithEmailStart(emailAndPassword))
+})
 class SignIn extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             email: '',
             password: ''
@@ -17,16 +27,10 @@ class SignIn extends React.Component{
         })
     }
     handleSubmit = async (event) => {
-
         event.preventDefault();
         const {email, password} = this.state;
-        try{
-            await auth.signInWithEmailAndPassword(email, password)
-            this.setState({email: '', password: ''})
-        }
-        catch(err){
-            console.log(err)
-        }        
+        this.props.signInWithEmailStart({email,password});
+        this.setState({ email: '', password: ''})  
     }
     render(){
         return(
@@ -38,12 +42,13 @@ class SignIn extends React.Component{
                     <FormInput type='password'  name='password' label='password' value = {this.state.password} handleChange={this.handleChange}/>
                     <div className="buttons">
                         <Button type="submit">SIGN IN</Button>
-                        <Button type='button' onClick={signInWithGoogle} google='true'>SIGN IN WITH GOOGLE</Button>
+                        <Button type='button' onClick={this.props.signInWithGoogleStart} google='true'>SIGN IN WITH GOOGLE</Button>
                     </div>
                 </form>
+                {/* {this.state.isLoading? <Spinner/> :null} */}
             </div>
         )
     }
 }
 
-export default SignIn;
+export default connect(null, mapDispatchToProps)(SignIn);

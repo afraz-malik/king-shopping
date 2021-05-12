@@ -14,3 +14,6 @@ export const decCartItem = (items)=>({
     type: 'DECERASE_ITEM_FROM_CART',
     payload: items
 })
+export const clearCart=()=>({
+    type: 'CLEAR_CART'
+})

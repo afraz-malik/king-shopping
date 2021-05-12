@@ -3,16 +3,15 @@ import React from 'react';
 import {Route} from 'react-router-dom'
 import {withRouter} from 'react-router-dom'
 //Component
-import ShopCollection from '../../components/shop-collection/shop-collection';
-import ShopCategory from '../../components/shop-category/shop-category'
+import Shop  from '../../components/shop/shop';
+import Collections from '../../components/collections/collections'
 
 
 const  ShopPage = ({match}) =>{ 
-
     return(
         <div className="">
-            <Route exact path={`${match.path}`} component={ShopCollection}/>
-            <Route  path={`${match.path}/:category`} component={ShopCategory}/>
+            <Route exact path={`${match.path}`} component={Shop}/>
+            <Route  path={`${match.path}/:category`} component={Collections}/>
         </div>
     )
 }

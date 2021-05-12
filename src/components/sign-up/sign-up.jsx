@@ -1,8 +1,16 @@
 import React from 'react';
-import FormInput from '../form-input/form-input'
 import './sign-up.scss'
+//Redux
+import {connect} from 'react-redux'
+import {signUp} from '../../redux/user/user.action'
+///Components
+import FormInput from '../form-input/form-input'
 import Button from '../button/button';
-import {auth, createUser} from '../../firebase/firebase-utils'
+// import {Spinner} from '../spinner/spinner';
+
+const mapDispatchToProps = (dispatch) =>({
+    signUp: (userData) => dispatch(signUp(userData))
+})
 class SignUp extends React.Component{
     constructor(){
         super();
@@ -13,6 +21,11 @@ class SignUp extends React.Component{
             confirmPassword : ''
         }
     }
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name] : event.target.value
+        })
+    }
     handleSubmit= async (event)=>{
         event.preventDefault();
         const {displayName, email, password, confirmPassword} = this.state
@@ -20,27 +33,12 @@ class SignUp extends React.Component{
             alert('Password not Matched')
             return
         }
-        try{
-            const {user} = await auth.createUserWithEmailAndPassword(
-                email,
-                password
-            )
-            await createUser(user, {displayName})
-            this.setState({
-                displayName: '',
-                email: '',
-                password: '',
-                confirmPassword : ''
-            })
-        }
-        catch(error){
-            console.log('error', error.message)
-        }
-  
-    }
-    handleChange = (event) => {
+        this.props.signUp({email, password, displayName});
         this.setState({
-            [event.target.name] : event.target.value
+            displayName: '',
+            email: '',
+            password: '',
+            confirmPassword : ''
         })
     }
     render(){
@@ -83,10 +81,10 @@ class SignUp extends React.Component{
                     />
                     <Button type='submit'>SIGN UP</Button>
                 </form>
-
+                {/* {this.state.isLoading? <Spinner/> :null} */}
             </div>
         )
     }
 }
 
-export default SignUp;
+export default connect(null, mapDispatchToProps)(SignUp);

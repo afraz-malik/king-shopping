@@ -5,13 +5,13 @@ import {connect} from 'react-redux'
 import {createStructuredSelector} from 'reselect'
 import {shopDataListSelectorToArrays} from '../../redux/shop-data/shop.data.selector'
 //Components
-import Collection from '../../components/collection/collection';
+import Collection from '../collection/collection';
 
 
 const mapStateToProps = createStructuredSelector({
     collections: shopDataListSelectorToArrays
 })
-const  ShopCollection = ({collections}) =>{ 
+const  Shop = ({collections}) =>{ 
     return(
         <div className='shoppage'>
             {
@@ -23,4 +23,4 @@ const  ShopCollection = ({collections}) =>{
     )
 }
 
-export default connect(mapStateToProps)(ShopCollection);
+export default connect(mapStateToProps)(Shop);

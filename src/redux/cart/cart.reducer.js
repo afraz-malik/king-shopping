@@ -14,6 +14,8 @@ export const cartReducer = (state=InitialState, action) =>{
             return Object.assign({}, state, {cartItem: clearFromCart(state.cartItem, action.payload)})
         case 'DECERASE_ITEM_FROM_CART':
             return Object.assign({}, state, {cartItem: decFromCart(state.cartItem, action.payload)})
+        case 'CLEAR_CART':
+            return Object.assign({}, state, {cartItem: []})
         default:
             return state
     }   

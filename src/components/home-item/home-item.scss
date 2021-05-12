@@ -12,6 +12,12 @@
     &.large{
       height: 380px;
     }
+    &:nth-last-child(2){
+      height: 380px;
+    }
+    &:last-child{
+      height: 380px;
+    }
     &:first-child {
       margin-right: 7.5px;
     }
