@@ -5,7 +5,6 @@ import { getShopDataFromFirestore} from '../../firebase/firebase-utils'
 
 export function* gettingShopData_Start_Async(){
     try{
-
         const shopData = yield call(getShopDataFromFirestore);
         yield put(gettingShopData_Success(shopData))
     }

@@ -6,10 +6,10 @@ import {isSignedOut} from '../redux/cart/cart.sagas'
 
 export default function* rootSaga(){
    yield all([
+      call(settingUserPersistenceStart),
       call(gettingShopData_Start),
       call(signInWithGoogleStart),
       call(signInWithEmailStart),
-      call(settingUserPersistenceStart),
       call(signOut),
       call(isSignedOut),
       call(signUp)

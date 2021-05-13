@@ -6,7 +6,17 @@ const StripeCheckoutButton = ({price}) =>{
     const publishableKey = 'pk_test_51IorcjHi1sHpYjVtYW88IFhEZ0jTg91PlKPNi1QCsKL8PIaDfdppGFOdjIC8JJzh5SMIa74VH2bQpH9OwXJUTv9f00xHyfkTFS'
     
     const onToken = (token) =>{
-            alert('Payment Success')
+        alert('Payment Success')
+        fetch('payment', {
+            method: 'POST',
+            headers: {'Content-Type' : 'application/json'},
+            body: JSON.stringify({
+                tokenId: token.id,
+                amount: priceForStripe,
+            })
+        })
+            .then(res=> res.json())
+            .then(data=> console.log(data))
     }
     
     return(
