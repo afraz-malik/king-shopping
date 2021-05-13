@@ -25,7 +25,6 @@ app.listen(port, error => {
   if (error) throw error;
   console.log('Server running on port ' + port);
 });
-app.get('/test', (req, res) => res.json('fuckingtesting'))
 app.post('/payment', (req, res) => {
   const body = {
     source: req.body.tokenId,
@@ -34,11 +33,9 @@ app.post('/payment', (req, res) => {
   };
     stripe.charges.create(body, (stripeErr, stripeRes) => {
     if (stripeErr) {
-      res.status(500).send({ error: stripeErr });
-      res.json('err')
+      res.status(500).send( stripeErr );
     } else {
-      res.status(200).send({ success: stripeRes });
-      res.json('working')
+      res.status(200).send(stripeRes);
     }
   });
 });
