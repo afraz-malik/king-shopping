@@ -44,6 +44,7 @@ const App = ({ currentUser, isCartHidden, isFetching, gettingShopData_Start, isU
   }, [isUserAuthenticated,gettingShopData_Start ])
   
   // const URL = '/king-shopping/'
+  // "homepage": "https://afraz-malik.github.io/king-shopping",
   const URL = '/'
   return (
     <Router>

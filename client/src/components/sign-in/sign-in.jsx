@@ -1,20 +1,23 @@
-import React , {useState} from 'react';
+import React , { useState} from 'react';
 import './sign-in.scss'
 //Redux
 import {connect} from 'react-redux'
 import {signInWithGoogleStart, signInWithEmailStart} from '../../redux/user/user.action'
+
+
 //Components
 import FormInput from '../form-input/form-input';
 import Button from '../button/button';
-// import {Spinner} from '../spinner/spinner';
+
 
 
 const mapDispatchToProps = (dispatch) =>({
     signInWithGoogleStart: () => dispatch(signInWithGoogleStart()),
-    signInWithEmailStart: (emailAndPassword) => dispatch(signInWithEmailStart(emailAndPassword))
+    signInWithEmailStart: (emailAndPassword) => dispatch(signInWithEmailStart(emailAndPassword)),
 })
 
 const SignIn = ({signInWithEmailStart,signInWithGoogleStart }) =>{
+    
     const [userCredentials, setUserCrendtials] = useState({email: '', password: ''})
     const {email, password} = userCredentials
     const handleChange = (event) =>{
@@ -28,7 +31,7 @@ const SignIn = ({signInWithEmailStart,signInWithGoogleStart }) =>{
 
     return(
         <div className="sign-in">
-            <h1>I already have an account</h1>
+            <h1>I already have an account!</h1>
             <span className='title'>Sign In with your Email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput type='email' name='email' label='email' value = {email} handleChange={handleChange} required/>
@@ -38,7 +41,6 @@ const SignIn = ({signInWithEmailStart,signInWithGoogleStart }) =>{
                     <Button type='button' onClick={signInWithGoogleStart} google='true'>SIGN IN WITH GOOGLE</Button>
                 </div>
             </form>
-            {/* {this.state.isLoading? <Spinner/> :null} */}
         </div>
     )
 

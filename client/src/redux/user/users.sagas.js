@@ -1,6 +1,6 @@
 import {takeLatest, put} from 'redux-saga/effects'
 import {auth, googleProvider,createUserInFirestore, isUserAuthenticated} from '../../firebase/firebase-utils'
-import {signInSuccess, signInFailed, signOutSuccess, signOutFailed} from './user.action'
+import { signInSuccess, signInFailed, signOutSuccess, signOutFailed} from './user.action'
 
 export function* settingUserPersistence(){
     const user = yield isUserAuthenticated();

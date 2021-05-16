@@ -5,3 +5,12 @@ export const currentUserSelector = createSelector(
     [userSelector],
     user => user.currentUser
 )
+
+export const Loading = createSelector(
+    [userSelector],
+    user=>user.isSigningIn
+)
+export const signInFailed = createSelector(
+    [userSelector],
+    user=>user.error
+)

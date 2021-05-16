@@ -42,3 +42,7 @@ export const signUpFailed =(err) =>({
     type: 'SIGN_UP_FAILED',
     payload: err
 })
+export const clearError = () =>({
+    type: 'CLEAR_ERROR',
+
+})

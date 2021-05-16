@@ -1,17 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './sign-up.scss'
 //Redux
 import { connect } from 'react-redux'
 import { signUp } from '../../redux/user/user.action'
+import { clearError } from '../../redux/user/user.action'
+
+import { createStructuredSelector } from 'reselect';
+import {Loading} from '../../redux/user/user.selectors'
+import {signInFailed} from '../../redux/user/user.selectors'
 ///Components
 import FormInput from '../form-input/form-input'
 import Button from '../button/button';
-// import {Spinner} from '../spinner/spinner';
+import {Spinner} from '../spinner/spinner';
 
-const mapDispatchToProps = (dispatch) => ({
-    signUp: (userData) => dispatch(signUp(userData))
+const mapStateToProps = createStructuredSelector({
+    isLoading: Loading,
+    error: signInFailed
 })
-const SignUp = ({ signUp }) => {
+const mapDispatchToProps = (dispatch) => ({
+    signUp: (userData) => dispatch(signUp(userData)),
+    clearError: () => dispatch(clearError())
+})
+const SignUp = ({ signUp,isLoading,error,clearError }) => {
+    useEffect(()=>{
+        return error? alert(error): null 
+    },[error])
+    if(error)(clearError())
     const [userCredentials, setUserCredentials] = useState({
         displayName: '',
         email: '',
@@ -75,10 +89,10 @@ const SignUp = ({ signUp }) => {
                 />
                 <Button type='submit'>SIGN UP</Button>
             </form>
-            {/* {this.state.isLoading? <Spinner/> :null} */}
+            {isLoading? <Spinner/> :null}
         </div>
     )
 
 }
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
