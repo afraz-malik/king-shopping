@@ -67,6 +67,8 @@ export function* signOut(){
     yield takeLatest('SIGN_OUT_START', signOutStart)
 }
 
+
+
 export function* signUpStart({payload}){
     try{
         const {email, password, displayName} = payload

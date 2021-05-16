@@ -22,6 +22,7 @@ const mapDispatchToProps = (dispatch) => ({
     clearError: () => dispatch(clearError())
 })
 const SignUp = ({ signUp,isLoading,error,clearError }) => {
+
     useEffect(()=>{
         return error? alert(error): null 
     },[error])
