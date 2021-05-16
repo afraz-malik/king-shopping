@@ -8,23 +8,24 @@
     border: 1px solid black;
     margin: 0 7.5px 15px;  
     overflow: hidden;
-   
-    &.large{
-      height: 380px;
+    // &.large{
+    //   height: 380px;
+    // }
+    &:first-child {
+      margin-right: 7.5px;
     }
     &:nth-last-child(2){
       height: 380px;
     }
-    &:last-child{
-      height: 380px;
-    }
-    &:first-child {
-      margin-right: 7.5px;
-    }
-  
     &:last-child {
       margin-left: 7.5px;
+      height: 380px;
     }
+    @media screen and (max-width: 800px) {
+      height: 200px !important;
+
+    }
+
     &:hover {
       cursor: pointer;
     
@@ -37,7 +38,7 @@
         opacity: 0.9;
       }
     }
-    
+
     .background-image{
       width: 100%;
       height: 100%;
