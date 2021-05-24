@@ -18,6 +18,8 @@ import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shoppage/shoppage';
 import CheckOut from './pages/checkout/checkout'
 import AboutPage from './pages/about/about'
+import AdminPage from './pages/adminpage/adminpage'
+
 
 import SignInSignUp from './pages/sign-in-sign-up/sign-in-sign-up';
 //Components
@@ -56,6 +58,7 @@ const App = ({ currentUser, isCartHidden, isFetching, gettingShopData_Start, isU
         <Route path={`${URL}about`} component={AboutPage} />
         <Route exact path={`${URL}checkout`} component={CheckOut} />
         <Route exact path={`${URL}signIn`} render={() => currentUser ? (<Redirect to={`${URL}`} />) : <SignInSignUp />} />
+        <Route exact path={`${URL}admin`}  component={AdminPage} />
       </Switch>
     </Router>
   );

@@ -83,7 +83,36 @@ export const getShopDataFromFirestore = async () =>{
   return convertedCollToObj
 }
 
+export const addItemInFirestore = async (ref, objectToAdd) =>{
+  // firestore.collection("shopData").doc("6").set({
+  //     title: 'Pizza',
+  //     id: '6',
+  //     items: [
+  //       {
+  //         id: 1,
+  //         name: 'Afraz Pizza',
+  //         imageUrl: 'https://foodnerd.s3.eu-west-1.amazonaws.com/production/image/file/293/Jalal___sons_Lahore.png',
+  //         price: 25
+  //       }
+  //     ]
+  // })
+  // .then(() => {
+  //     console.log("Document successfully written!");
+  // })
+  // .catch((error) => {
+  //     console.error("Error writing document: ", error);
+  // });
 
+  await firestore.collection("shopData").doc(ref).update({
+    items: firebase.firestore.FieldValue.arrayUnion(objectToAdd)
+  })
+  .then(() => {
+      console.log('data saved successfully')
+    })
+  .catch((error) => {
+      console.error('data saved failed', error);
+  });
+}
 
   
 

@@ -8,6 +8,7 @@
         width: 95vw;
     }
     form{
+        z-index: -1;
         @media screen and (max-width: 800px){
             width: 90vw;
            

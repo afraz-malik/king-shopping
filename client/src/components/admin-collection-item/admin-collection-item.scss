@@ -1,0 +1,22 @@
+.admin-collection-item{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    // background-color: lightgrey;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+    img{
+        width: 100px;
+    }
+    .new{
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .cross{
+        cursor: pointer;
+        font-size: 20px;
+    }
+}
