@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/king-shopping/static/css/main.1905ea09.chunk.css",
-    "main.js": "/king-shopping/static/js/main.618e2427.chunk.js",
-    "main.js.map": "/king-shopping/static/js/main.618e2427.chunk.js.map",
-    "runtime-main.js": "/king-shopping/static/js/runtime-main.7895d9d8.js",
-    "runtime-main.js.map": "/king-shopping/static/js/runtime-main.7895d9d8.js.map",
-    "static/js/2.da317d50.chunk.js": "/king-shopping/static/js/2.da317d50.chunk.js",
-    "static/js/2.da317d50.chunk.js.map": "/king-shopping/static/js/2.da317d50.chunk.js.map",
-    "static/js/3.483e0bc4.chunk.js": "/king-shopping/static/js/3.483e0bc4.chunk.js",
-    "static/js/3.483e0bc4.chunk.js.map": "/king-shopping/static/js/3.483e0bc4.chunk.js.map",
-    "index.html": "/king-shopping/index.html",
-    "static/css/main.1905ea09.chunk.css.map": "/king-shopping/static/css/main.1905ea09.chunk.css.map",
-    "static/js/2.da317d50.chunk.js.LICENSE.txt": "/king-shopping/static/js/2.da317d50.chunk.js.LICENSE.txt",
-    "static/media/cart-icon.a688874f.svg": "/king-shopping/static/media/cart-icon.a688874f.svg",
-    "static/media/crown.3a4e2b15.svg": "/king-shopping/static/media/crown.3a4e2b15.svg"
+    "main.css": "/static/css/main.83008878.chunk.css",
+    "main.js": "/static/js/main.fb8cfc09.chunk.js",
+    "main.js.map": "/static/js/main.fb8cfc09.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e1997c7a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e1997c7a.js.map",
+    "static/js/2.c6c90ffc.chunk.js": "/static/js/2.c6c90ffc.chunk.js",
+    "static/js/2.c6c90ffc.chunk.js.map": "/static/js/2.c6c90ffc.chunk.js.map",
+    "static/js/3.949aae46.chunk.js": "/static/js/3.949aae46.chunk.js",
+    "static/js/3.949aae46.chunk.js.map": "/static/js/3.949aae46.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.83008878.chunk.css.map": "/static/css/main.83008878.chunk.css.map",
+    "static/js/2.c6c90ffc.chunk.js.LICENSE.txt": "/static/js/2.c6c90ffc.chunk.js.LICENSE.txt",
+    "static/media/cart-icon.a688874f.svg": "/static/media/cart-icon.a688874f.svg",
+    "static/media/crown.3a4e2b15.svg": "/static/media/crown.3a4e2b15.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7895d9d8.js",
-    "static/js/2.da317d50.chunk.js",
-    "static/css/main.1905ea09.chunk.css",
-    "static/js/main.618e2427.chunk.js"
+    "static/js/runtime-main.e1997c7a.js",
+    "static/js/2.c6c90ffc.chunk.js",
+    "static/css/main.83008878.chunk.css",
+    "static/js/main.fb8cfc09.chunk.js"
   ]
 }
