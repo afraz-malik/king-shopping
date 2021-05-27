@@ -22,7 +22,8 @@ export function* gettingShopData_Start(){
 
 export function* addingItemInDb(data){
     try{
-       const result = yield addItemInFirestore(data.payload.ref, data.payload.objToAdd);
+        // console.log(data)
+       const result = yield addItemInFirestore(data.payload.ref, data.payload.collectionToAdd, data.payload.itemToAdd );
        yield put(addingItemInDb_Success(result))
     }
     catch(error){

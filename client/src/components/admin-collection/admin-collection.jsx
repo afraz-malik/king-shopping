@@ -2,17 +2,13 @@ import React , {useState}from 'react'
 import './admin-collection.scss'
 //Router
 import {withRouter} from 'react-router-dom'
-//Redux
-import {connect } from 'react-redux'
-import {addItemInDb} from '../../redux/shop-data/shop.data.actions'
+
 //Components
 import AdmincollecionItem from '../admin-collection-item/admin-collection-item';
-import ItemBoxPopup from '../admin-add-item-box/admin-add-item-box'
+import {AdditemsInCollection} from '../admin-add-item-box/admin-add-item-box'
 
-const mapDispatchToProps = (dispatch) =>({
-    addItemInDb: (ref, objToAdd) => dispatch(addItemInDb({ref, objToAdd}))
-})
-const AdminCollection = ({id, title, items, addItemInDb}) =>{
+
+const AdminCollection = ({id, title, items}) =>{
     const [itemBox, toggleItemBox] = useState(false);
     const [tempTitle, setTempTitle] = useState(null);
     const [tempId, setTempId] = useState(null);
@@ -29,7 +25,6 @@ const AdminCollection = ({id, title, items, addItemInDb}) =>{
         setTempId(id)
         setTempItems(items)
     }
-    console.log(showItems)
     return(
         <div className='admin-collection'>
             <div className="upper-bar"  onClick={()=>toggleCollection()}>
@@ -47,8 +42,8 @@ const AdminCollection = ({id, title, items, addItemInDb}) =>{
                 </div>
                 :null
             }
-            {itemBox? <ItemBoxPopup toggle = {toggleBox} id= {tempId} title = {tempTitle} addItemInDb = {addItemInDb} items={tempItems}/>: null}
+            {itemBox? <AdditemsInCollection toggle = {toggleBox} id= {tempId} title = {tempTitle} items={tempItems}/>: null}
         </div>
     )
 }
-export default withRouter(connect(null,mapDispatchToProps)(AdminCollection));
+export default withRouter(AdminCollection);
