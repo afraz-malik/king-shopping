@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/king-shopping/static/css/main.83511aa6.chunk.css",
-    "main.js": "/king-shopping/static/js/main.3a3a5163.chunk.js",
-    "main.js.map": "/king-shopping/static/js/main.3a3a5163.chunk.js.map",
+    "main.js": "/king-shopping/static/js/main.d69a2036.chunk.js",
+    "main.js.map": "/king-shopping/static/js/main.d69a2036.chunk.js.map",
     "runtime-main.js": "/king-shopping/static/js/runtime-main.1b06c918.js",
     "runtime-main.js.map": "/king-shopping/static/js/runtime-main.1b06c918.js.map",
     "static/js/2.8b69fab5.chunk.js": "/king-shopping/static/js/2.8b69fab5.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.1b06c918.js",
     "static/js/2.8b69fab5.chunk.js",
     "static/css/main.83511aa6.chunk.css",
-    "static/js/main.3a3a5163.chunk.js"
+    "static/js/main.d69a2036.chunk.js"
   ]
 }
