@@ -25,6 +25,9 @@ export function* addingItemInDb(data){
         // console.log(data)
        const result = yield addItemInFirestore(data.payload.ref, data.payload.collectionToAdd, data.payload.itemToAdd );
        yield put(addingItemInDb_Success(result))
+    //    alert("Added Successfully ! Kindly Refresh page")
+       alert("Added Successfully !")
+       window.location.reload(false); 
     }
     catch(error){
         yield put(addingItemInDb_Failed(error.message))

@@ -44,10 +44,14 @@ const App = ({ currentUser, isCartHidden, isFetching, gettingShopData_Start, isU
     isUserAuthenticated() 
     gettingShopData_Start()
   }, [isUserAuthenticated,gettingShopData_Start ])
-  
+
+  //Kindly Change the followings accordingly if you are hosting on GH Pages
   // const URL = '/king-shopping/'
   // "homepage": "https://afraz-malik.github.io/king-shopping",
+  // shopData Sagas
+  // signIn admin
   const URL = '/'
+  
   return (
     <Router>
 
