@@ -14,6 +14,11 @@ app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(enforce.HTTPS({trustProtoHeader: true}));
+
+app.get('/service-worker.js',(req, res)=>{
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'service-worker.js'));
+})
+
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
 
@@ -23,9 +28,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-app.get('/service-worker.js',(req, res)=>{
-  res.sendFile(path.resolve(__dirname, '..', 'build', 'serviceWorker.js'));
-})
+
 app.post('/payment', (req, res) => {
   const body = {
     source: req.body.tokenId,
