@@ -22,10 +22,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-app.listen(port, error => {
-  if (error) throw error;
-  console.log('Server running on port ' + port);
-});
 
 app.get('/service-worker.js',(req, res)=>{
   res.sendFile(path.resolve(__dirname, '..', 'build', 'service-worker.js'));
@@ -37,10 +33,14 @@ app.post('/payment', (req, res) => {
     currency: 'usd'
   };
     stripe.charges.create(body, (stripeErr, stripeRes) => {
-    if (stripeErr) {
+      if (stripeErr) {
       res.status(500).send( stripeErr );
     } else {
       res.status(200).send(stripeRes);
     }
   });
+});
+app.listen(port, error => {
+  if (error) throw error;
+  console.log('Server running on port ' + port);
 });
