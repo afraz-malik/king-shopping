@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
 import {store, persistor} from './redux/store'
 import {PersistGate} from 'redux-persist/integration/react'
-import serviceWorker from './service-worker'
+import serviceWorker from './serviceWorker'
 
 ReactDOM.render(
   <Provider store={store}>

@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 app.get('/service-worker.js',(req, res)=>{
-  res.sendFile(path.resolve(__dirname, '..', 'build', 'service-worker.js'));
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'serviceWorker.js'));
 })
 app.post('/payment', (req, res) => {
   const body = {
