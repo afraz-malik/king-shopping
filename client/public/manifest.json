@@ -1,6 +1,6 @@
 {
-  "short_name": "King Shopping",
-  "name": "King Shopping by Afraz",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
