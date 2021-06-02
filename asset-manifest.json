@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/king-shopping/static/css/main.83511aa6.chunk.css",
-    "main.js": "/king-shopping/static/js/main.d69a2036.chunk.js",
-    "main.js.map": "/king-shopping/static/js/main.d69a2036.chunk.js.map",
+    "main.css": "/king-shopping/static/css/main.e0491318.chunk.css",
+    "main.js": "/king-shopping/static/js/main.b6b702ae.chunk.js",
+    "main.js.map": "/king-shopping/static/js/main.b6b702ae.chunk.js.map",
     "runtime-main.js": "/king-shopping/static/js/runtime-main.1b06c918.js",
     "runtime-main.js.map": "/king-shopping/static/js/runtime-main.1b06c918.js.map",
     "static/js/2.8b69fab5.chunk.js": "/king-shopping/static/js/2.8b69fab5.chunk.js",
@@ -10,15 +10,17 @@
     "static/js/3.949aae46.chunk.js": "/king-shopping/static/js/3.949aae46.chunk.js",
     "static/js/3.949aae46.chunk.js.map": "/king-shopping/static/js/3.949aae46.chunk.js.map",
     "index.html": "/king-shopping/index.html",
-    "static/css/main.83511aa6.chunk.css.map": "/king-shopping/static/css/main.83511aa6.chunk.css.map",
+    "service-worker.js": "/king-shopping/service-worker.js",
+    "service-worker.js.map": "/king-shopping/service-worker.js.map",
+    "static/css/main.e0491318.chunk.css.map": "/king-shopping/static/css/main.e0491318.chunk.css.map",
     "static/js/2.8b69fab5.chunk.js.LICENSE.txt": "/king-shopping/static/js/2.8b69fab5.chunk.js.LICENSE.txt",
     "static/media/cart-icon.a688874f.svg": "/king-shopping/static/media/cart-icon.a688874f.svg",
-    "static/media/crown.3a4e2b15.svg": "/king-shopping/static/media/crown.3a4e2b15.svg"
+    "static/media/crown.207ae289.svg": "/king-shopping/static/media/crown.207ae289.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1b06c918.js",
     "static/js/2.8b69fab5.chunk.js",
-    "static/css/main.83511aa6.chunk.css",
-    "static/js/main.d69a2036.chunk.js"
+    "static/css/main.e0491318.chunk.css",
+    "static/js/main.b6b702ae.chunk.js"
   ]
 }
