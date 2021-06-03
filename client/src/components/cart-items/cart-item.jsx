@@ -11,4 +11,4 @@ const Cartitems = ({item}) => (
     </div>
 )   
 
-export default Cartitems;
+export default React.memo(Cartitems);

@@ -19,4 +19,3 @@ export const Spinner = () =>{
         </div>
     )
 }
-export default SpinnerHOC;

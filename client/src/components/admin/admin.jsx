@@ -9,7 +9,6 @@ import {shopDataListSelectorToArrays} from '../../redux/shop-data/shop.data.sele
 import {isFetchingSelector} from '../../redux/shop-data/shop.data.selector'
 
 //Components
-import {Spinner} from '../spinner/spinner';
 import Button from '../../components/button/button'
 import AdminCollection from '../admin-collection/admin-collection';
 
@@ -36,8 +35,9 @@ const  Admin = ({collections, isLoading}) =>{
                     <AdminCollection key={id} id={id} {...otherCollectionProps}/>
                 ))
             }
-            {itemBox? <AddCollection toggle = {toggleBox}  collections={collections}/>: null}
-            {isLoading? <Spinner/> :null}
+            {
+                itemBox? <AddCollection toggle = {toggleBox}  collections={collections}/>: null
+            }
         </div>
     )
 }

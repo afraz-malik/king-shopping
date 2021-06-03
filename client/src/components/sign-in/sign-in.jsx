@@ -28,6 +28,7 @@ const SignIn = ({signInWithEmailStart,signInWithGoogleStart, history }) =>{
         event.preventDefault();
         if (email === 'admin@gmail.com' && password === 'admin') {
             alert('Welcome admin')
+            // history.push(`/king-shopping/admin`)
             history.push(`/admin`)
             setUserCrendtials({ email: '', password: ''})  
             return
