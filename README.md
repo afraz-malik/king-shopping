@@ -12,4 +12,6 @@ App is using followings Main tools (excl. tons of minor's): <br/>
   -> Firebase for database <br/>
   -> express for backend <br/>
   -> Stripe for payements  <br/>
-  -> Designed PWA
+  -> Designed PWA <br/>
+  
+  Whenever is read the name i gave to this repo, i laugh too !! 🦖
