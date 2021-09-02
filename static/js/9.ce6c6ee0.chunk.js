@@ -1,0 +1,2 @@
+(this["webpackJsonpking-shopping"]=this["webpackJsonpking-shopping"]||[]).push([[9],{110:function(n,s,i){"use strict";i.r(s);i(1);var t=i(3);s.default=function(){return Object(t.jsx)("div",{className:"about",children:"Page Under Construction ;)"})}}}]);
+//# sourceMappingURL=9.ce6c6ee0.chunk.js.map
