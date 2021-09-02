@@ -67,6 +67,9 @@ const App = ({
   useEffect(() => {
     isUserAuthenticated()
     gettingShopData_Start()
+    fetch('https://king-shopping.herokuapp.com/').then((res) => {
+      console.log(res.status)
+    })
   }, [isUserAuthenticated, gettingShopData_Start])
 
   return (
