@@ -20,7 +20,9 @@ app.use(enforce.HTTPS({ trustProtoHeader: true }))
 app.get('/service-worker.js', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client/build', 'service-worker.js'))
 })
-//ok
+// below line has been extracted from package.json
+// "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+
 // if (process.env.NODE_ENV === 'production') {
 //   app.use(express.static(path.join(__dirname,  'client/build')));
 
